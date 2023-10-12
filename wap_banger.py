@@ -12,7 +12,7 @@ date = datetime.datetime.now()
 formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
-handler = logging.FileHandler('/Users/deanward/Documents/Scripts/WAPBanger/wapmasterSeptember2.log')
+handler = logging.FileHandler('')
 handler.setLevel(logging.INFO)
 handler.setFormatter(formatter)
 logger.addHandler(handler)
@@ -25,7 +25,7 @@ myswitch = []
 #Above is the switch IP list, every switch ip that is listed in here is going to get SSH'd into. 
 
 def ssh(username, password, myswitch):
-    show_vlan = ("show vlan | inc 350")
+    show_vlan = ("show vlan | inc xxx")
 
     device_type = 'cisco_ios'
     net_connect = ConnectHandler(host=myswitch, username=username, password=password, device_type=device_type)
